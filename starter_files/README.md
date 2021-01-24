@@ -70,49 +70,49 @@ Following is Architecture Diagram of the project which will help have a glance o
 
 Following are registered datasets
 
-![Registered Datasets](images/Udacity_Registered_datasets.png)
+![Registered Datasets](images/Udacity_Registered_datasets.PNG)
 
 ### 2. Create Automated ML Experiment
 Automated ML Experiment Run completed:
 In this step, we created an Automated ML model using a registered dataset, creating a compute cluster, and running the model.
 
-![Automated ML Experiment](images/Udacity_run_successfull.png)
+![Automated ML Experiment](images/Udacity_run_successfull.PNG)
 
 Automated ML Experiment Run details
 
-![Automated ML Experiment Details](images/Udacity_run_successfull_2.png)
+![Automated ML Experiment Details](images/Udacity_run_successfull_2.PNG)
 
 ### 3. Best Run Model
 Best Run Model
 
-![Best Run Model](images/Udacity_best_model.png)
+![Best Run Model](images/Udacity_best_model.PNG)
 
 ### 4. Enable Application Insights
 Update logs.py file to enable application insights and running it.
-![Updates in logs.py](images/Udacity_logs_dot_py.png)
+![Updates in logs.py](images/Udacity_logs_dot_py.PNG)
 
 Application Insights Enabled Successfully for logging
-![Application Insights Enabled](images/Udacity_application_insights_enabled.png)
+![Application Insights Enabled](images/Udacity_application_insights_enabled.PNG)
 
 ### 7. Configuring Swagger Docs
 Configuring swagger 
-![Swagger default docs](images/Udacity_swagger_default.png)
-![Swagger project docs](images/Udacity_swagger.png)
+![Swagger default docs](images/Udacity_swagger_default.PNG)
+![Swagger project docs](images/Udacity_swagger.PNG)
 
 ### 6. Consuming Endpoints
 After adding endpoint uri and key in endpoints.py file and running the file
 
 ![Modifying Endpoints.py](images/Udacity_Endpoint_py.png)
 
-![Consuming Endpoints](images/Udacity_endpoints.png)
+![Consuming Endpoints](images/Udacity_endpoints.PNG)
 
 ### 7. Pipeline Created, Deployed and Consumed
 
-![Pipeline created](images/Udacity_pipeline_created.png)
+![Pipeline created](images/Udacity_pipeline_created.PNG)
 
-![Pipeline endpoint created](images/Udacity_pipeline_endpoint.png)
+![Pipeline endpoint created](images/Udacity_pipeline_endpoint.PNG)
 
-![Pipeline endpoint overview](images/Udacity_published_endpoint_overview.png)
+![Pipeline endpoint overview](images/Udacity_published_endpoint_overview.PNG)
 
 ## Screen Recording
 Following is the url for screen recording: [link](https://shorturl.at/dpyGO) 
