@@ -8,10 +8,10 @@ Following step will be followed in the project:
 2. Deploy the model
 3. Consuming the deployed model (Configuring Swagger documentation)
 4. Create Pipeline
-5. Consume created Pipeline and Deploy it
+5. Consume created Pipeline and Deploy it <br /><br />
 
-## Dataset
-### Data Set Information:
+# Dataset
+## Data Set Information:
 
 The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
 
@@ -48,10 +48,10 @@ social and economic context attributes
 20. nr.employed: number of employees - quarterly indicator (numeric)
     
 #### Output variable (desired target):
-21. y - has the client subscribed a term deposit? (binary: 'yes','no')
+21. y - has the client subscribed a term deposit? (binary: 'yes','no')<br /><br /><br />
 
 
-## Architectural Diagram
+# Architectural Diagram
 Following is Architecture Diagram of the project which will help have a glance over the steps performed in this project to achieve the desired output:
 
 ![Architecture Diagram](images/ArchitectureDiagram.png)
@@ -63,62 +63,77 @@ Following is Architecture Diagram of the project which will help have a glance o
 5. Consume Model Endpoint: Next is we will consuming the deployed model we will do this the adding the uri and key in endpoints.py file by copying from deployed model's consume section.
 6. Create pipeline via notebook: We will be uploading the notebook provided in the starter files and then modifying at required cells and then will be running the cells which will create the pipeline.
 7. Consume created Pipeline: Once the pipeline is created we will runs the cells provided in notebook itself to consume the pipeline.
-8. Publish Pipeline: Once pipeline is consumed we will then run the cells provided in notebook to publish the pipeline.
+8. Publish Pipeline: Once pipeline is consumed we will then run the cells provided in notebook to publish the pipeline.<br /><br /><br />
 
-## Key Steps
-### 1. Registered Datasets
+# Key Steps
+## 1. Registered Datasets
 
-Following are registered datasets
+From the following list of Registered Dataset we selected the Bank Marketing dataset.<br /><br />
 
-![Registered Datasets](images/Udacity_Registered_datasets.PNG)
+![Registered Datasets](images/Udacity_Registered_datasets.PNG)<br /><br />
 
-### 2. Create Automated ML Experiment
-Automated ML Experiment Run completed:
-In this step, we created an Automated ML model using a registered dataset, creating a compute cluster, and running the model.
+## 2. Create Automated ML Experiment
 
-![Automated ML Experiment](images/Udacity_run_successfull.PNG)
+In this step, we created an Automated ML model using a registered bank marketing dataset, and then created a compute cluster, and started the Automated ML run which created Runs for various models using different algorithms.<br /><br />
 
-Automated ML Experiment Run details
+![Automated ML Experiment](images/Udacity_run_successfull.PNG)<br /><br />
 
-![Automated ML Experiment Details](images/Udacity_run_successfull_2.PNG)
+And Following are details of Automated ML Run<br /><br />
 
-### 3. Best Run Model
-Best Run Model
+![Automated ML Experiment Details](images/Udacity_run_successfull_2.PNG)<br /><br />
 
-![Best Run Model](images/Udacity_best_model.PNG)
+## 3. Best Run Model
 
-### 4. Enable Application Insights
-Update logs.py file to enable application insights and running it.
-![Updates in logs.py](images/Udacity_logs_dot_py.PNG)
+Out of different algorithms tried in the Automated ML run the Best Model was ***Voting Ensemble*** which gave the accuracy of ***91.958%***. Then we deployed this model.<br /><br />
 
-Application Insights Enabled Successfully for logging
-![Application Insights Enabled](images/Udacity_application_insights_enabled.PNG)
+![Best Run Model](images/Udacity_best_model.PNG)<br /><br />
 
-### 7. Configuring Swagger Docs
-Configuring swagger 
-![Swagger default docs](images/Udacity_swagger_default.PNG)
-![Swagger project docs](images/Udacity_swagger.PNG)
+## 4. Enable Application Insights
 
-### 6. Consuming Endpoints
-After adding endpoint uri and key in endpoints.py file and running the file
+In order to enable logging downloaded the configuration from Azure workspace and added to project and the made changes in logs.py file to enable application insights. <br /><br />
 
-![Modifying Endpoints.py](images/Udacity_Endpoint_py.png)
+![Updates in logs.py](images/Udacity_logs_dot_py.PNG)<br /><br />
 
-![Consuming Endpoints](images/Udacity_endpoints.PNG)
+We enabled Application Insights by making its value *True* in logs.py and ran logs.py file and enabled logging successfully.<br /><br />
 
-### 7. Pipeline Created, Deployed and Consumed
+![Application Insights Enabled](images/Udacity_application_insights_enabled.PNG)<br /><br />
 
-![Pipeline created](images/Udacity_pipeline_created.PNG)
+## 5. Configuring Swagger Docs
 
-![Pipeline endpoint created](images/Udacity_pipeline_endpoint.PNG)
+Then we configured swagger docs by installing swagger by changing the port number in bash script file and running it.<br /><br />
 
-![Pipeline endpoint overview](images/Udacity_published_endpoint_overview.PNG)
+![Swagger default docs](images/Udacity_swagger_default.PNG)<br /><br />
 
-## Screen Recording
-Following is the url for screen recording: [link](https://shorturl.at/dpyGO) 
+Then we started the server by running serve.py file inorder to serve your project's swagger.json file.<br /><br />
+
+![Swagger project docs](images/Udacity_swagger.PNG)<br /><br />
+
+## 6. Consuming Endpoints
+Then we added endpoint uri and key from deployed model *consume* section, in endpoints.py file and running the file.<br /><br />
+
+![Modifying Endpoints.py](images/Udacity_Endpoint_py.png)<br /><br />
+
+![Consuming Endpoints](images/Udacity_endpoints.PNG)<br /><br />
+
+## 7. Pipeline Created, Deployed and Consumed
+
+For this section we uploaded the sample notebook provided and made required changes in cell and ran the notebook. This created pipeline and then we deployed the pipeline which generated the endpoint for the pipeline which we consumed it.<br /><br />
+
+![Pipeline created](images/Udacity_pipeline_created.PNG)<br /><br />
+
+![Pipeline run details widget](images/Udacity_run_details_widget.PNG)<br /><br />
+
+![Pipeline endpoint created](images/Udacity_pipeline_endpoint.PNG)<br /><br />
+
+![Pipeline endpoind published successfully](images/Udacity_published_endpoint.PNG)<br /><br />
+
+![Pipeline endpoint overview](images/Udacity_published_endpoint_overview.PNG)<br /><br />
+
+# Screen Recording
+Following is the url for screen recording: [link](https://shorturl.at/dpyGO) <br /><br />
 
 
-## Standout Suggestions
+# Standout Suggestions
 - Resolving data imbalance issue in the dataset can prevent the bais and could improve the model prediction even more.
 - Trying out deep learning (neural net) option when training the model, this could improve the accuracy.
 - Try setting the featurization parameter of the AutoMLConfig class to 'auto', meaning that the featurization step should be done automatically.
