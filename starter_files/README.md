@@ -121,13 +121,15 @@ For this section we uploaded the sample notebook provided and made required chan
 
 ![Pipeline created](images/Udacity_pipeline_created.PNG)<br /><br />
 
-![Pipeline run details widget](images/Udacity_run_details_widget.PNG)<br /><br />
-
 ![Pipeline endpoint created](images/Udacity_pipeline_endpoint.PNG)<br /><br />
 
 ![Pipeline endpoind published successfully](images/Udacity_published_endpoint.PNG)<br /><br />
 
 ![Pipeline endpoint overview](images/Udacity_published_endpoint_overview.PNG)<br /><br />
+
+![Pipeline run details widget](images/Udacity_run_widget.PNG)<br /><br />
+
+![Pipeline endpoint run details widget](images/Udacity_pipeline_endpoint_run_widget.PNG)<br /><br />
 
 # Screen Recording
 Following is the url for screen recording: [link](https://shorturl.at/dpyGO) <br /><br />
