@@ -54,7 +54,7 @@ social and economic context attributes
 # Architectural Diagram
 Following is Architecture Diagram of the project which will help have a glance over the steps performed in this project to achieve the desired output:
 
-![Architecture Diagram](images/ArchitectureDiagram.png)
+![Architecture Diagram](starter_files/images/ArchitectureDiagram.png)
 
 1. AutoML Run: In this we create a Automated ML model by selecting the Bank Marking dataset from Registered Dataset and create a compute cluster (Standard_DS12_v2) and 1 as maximum number of nodes. We will be run the Automated run as a Classification and setting the Exit Criterion to 1 hour and the Concurrency to 1.
 2. Select the Best Model & Deploy: On completion of AutoML run, we will be selecting the best model and we will be deploying it and while deploying we will be using "Azure Container Instances" (ACI) and we will also enable "Authentication".
@@ -70,66 +70,66 @@ Following is Architecture Diagram of the project which will help have a glance o
 
 From the following list of Registered Dataset we selected the Bank Marketing dataset.<br /><br />
 
-![Registered Datasets](images/Udacity_Registered_datasets.PNG)<br /><br />
+![Registered Datasets](starter_files/images/Udacity_Registered_datasets.PNG)<br /><br />
 
 ## 2. Create Automated ML Experiment
 
 In this step, we created an Automated ML model using a registered bank marketing dataset, and then created a compute cluster, and started the Automated ML run which created Runs for various models using different algorithms.<br /><br />
 
-![Automated ML Experiment](images/Udacity_run_successfull.PNG)<br /><br />
+![Automated ML Experiment](starter_files/images/Udacity_run_successfull.PNG)<br /><br />
 
 And Following are details of Automated ML Run<br /><br />
 
-![Automated ML Experiment Details](images/Udacity_run_successfull_2.PNG)<br /><br />
+![Automated ML Experiment Details](starter_files/images/Udacity_run_successfull_2.PNG)<br /><br />
 
 ## 3. Best Run Model
 
 Out of different algorithms tried in the Automated ML run the Best Model was ***Voting Ensemble*** which gave the accuracy of ***91.958%***. Then we deployed this model.<br /><br />
 
-![Best Run Model](images/Udacity_best_model.PNG)<br /><br />
+![Best Run Model](starter_files/images/Udacity_best_model.PNG)<br /><br />
 
 ## 4. Enable Application Insights
 
 In order to enable logging downloaded the configuration from Azure workspace and added to project and the made changes in logs.py file to enable application insights. <br /><br />
 
-![Updates in logs.py](images/Udacity_logs_dot_py.PNG)<br /><br />
+![Updates in logs.py](starter_files/images/Udacity_logs_dot_py.PNG)<br /><br />
 
 We enabled Application Insights by making its value *True* in logs.py and ran logs.py file and enabled logging successfully.<br /><br />
 
-![Application Insights Enabled](images/Udacity_application_insights_enabled.PNG)<br /><br />
+![Application Insights Enabled](starter_files/images/Udacity_application_insights_enabled.PNG)<br /><br />
 
 ## 5. Configuring Swagger Docs
 
 Then we configured swagger docs by installing swagger by changing the port number in bash script file and running it.<br /><br />
 
-![Swagger default docs](images/Udacity_swagger_default.PNG)<br /><br />
+![Swagger default docs](starter_files/images/Udacity_swagger_default.PNG)<br /><br />
 
 Then we started the server by running serve.py file inorder to serve your project's swagger.json file.<br /><br />
 
-![Swagger project docs](images/Udacity_swagger.PNG)<br /><br />
+![Swagger project docs](starter_files/images/Udacity_swagger.PNG)<br /><br />
 
 ## 6. Consuming Endpoints
 Then we added endpoint uri and key from deployed model *consume* section, in endpoints.py file and running the file.<br /><br />
 
-![Modifying Endpoints.py](images/Udacity_Endpoint_py.png)<br /><br />
+![Modifying Endpoints.py](starter_files/images/Udacity_Endpoint_py.png)<br /><br />
 
-![Consuming Endpoints](images/Udacity_endpoints.PNG)<br /><br />
+![Consuming Endpoints](starter_files/images/Udacity_endpoints.PNG)<br /><br />
 
 ## 7. Pipeline Created, Deployed and Consumed
 
 For this section we uploaded the sample notebook provided and made required changes in cell and ran the notebook. This created pipeline and then we deployed the pipeline which generated the endpoint for the pipeline which we consumed it.<br /><br />
 
-![Pipeline created](images/Udacity_pipeline_created.PNG)<br /><br />
+![Pipeline created](starter_files/images/Udacity_pipeline_created.PNG)<br /><br />
 
-![Pipeline endpoint created](images/Udacity_pipeline_endpoint.PNG)<br /><br />
+![Pipeline endpoint created](starter_files/images/Udacity_pipeline_endpoint.PNG)<br /><br />
 
-![Pipeline endpoind published successfully](images/Udacity_published_endpoint.PNG)<br /><br />
+![Pipeline endpoind published successfully](starter_files/images/Udacity_published_endpoint.PNG)<br /><br />
 
-![Pipeline endpoint overview](images/Udacity_published_endpoint_overview.PNG)<br /><br />
+![Pipeline endpoint overview](starter_files/images/Udacity_published_endpoint_overview.PNG)<br /><br />
 
-![Pipeline run details widget](images/Udacity_run_widget.PNG)<br /><br />
+![Pipeline run details widget](starter_files/images/Udacity_run_widget.PNG)<br /><br />
 
-![Pipeline endpoint run details widget](images/Udacity_pipeline_endpoint_run_widget.PNG)<br /><br />
+![Pipeline endpoint run details widget](starter_files/images/Udacity_pipeline_endpoint_run_widget.PNG)<br /><br />
 
 # Screen Recording
 Following is the url for screen recording: [link](https://shorturl.at/dpyGO) <br /><br />
